@@ -1,0 +1,13 @@
+.numbers{
+    display: flex;
+}
+
+.num{
+    margin: 10px;
+}
+
+#answer{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+}
