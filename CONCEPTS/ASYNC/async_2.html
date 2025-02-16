@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Concept 2</title>
+</head>
+
+<body>
+    <h1>Async Concepts 2</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let intervalId = null;
+
+    const getName = function(){
+        console.log("Parth" , Date.now());
+    }
+
+    document.getElementById('start').addEventListener('click' , function(){
+        if(!intervalId){
+            intervalId = setInterval(getName , 1000);
+            console.log("Interval Started: ", intervalId);
+        }
+    });
+
+    document.getElementById('stop').addEventListener('click' , function(){
+        if(intervalId){
+            clearInterval(intervalId);
+            console.log("Interval Stopped: ", intervalId);
+            intervalId = null;
+        }
+    });
+</script>
+
+</html>
